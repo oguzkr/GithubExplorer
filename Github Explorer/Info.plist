@@ -20,6 +20,22 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Rubik-BoldItalic.ttf</string>
+		<string>Rubik-Regular.ttf</string>
+		<string>Rubik-ExtraBold.ttf</string>
+		<string>Rubik-BlackItalic.ttf</string>
+		<string>Rubik-SemiBold.ttf</string>
+		<string>Rubik-LightItalic.ttf</string>
+		<string>Rubik-Italic.tff</string>
+		<string>Rubik-Black.ttf</string>
+		<string>Rubik-Bold.tff</string>
+		<string>Rubik-SemiBoldItalic.tff</string>
+		<string>Rubik-Light.tff</string>
+		<string>Rubik-Medium.ttf</string>
+		<string>Rubik-ExtraBoldItalic.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

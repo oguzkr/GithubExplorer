@@ -13,6 +13,30 @@
 		12D73D1F268389A800B9704D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D1D268389A800B9704D /* Main.storyboard */; };
 		12D73D21268389AA00B9704D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D20268389AA00B9704D /* Assets.xcassets */; };
 		12D73D24268389AA00B9704D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D22268389AA00B9704D /* LaunchScreen.storyboard */; };
+		12D73D4426838D4A00B9704D /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3626838D4A00B9704D /* Rubik-MediumItalic.ttf */; };
+		12D73D4526838D4A00B9704D /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3726838D4A00B9704D /* Rubik-Bold.ttf */; };
+		12D73D4626838D4A00B9704D /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3826838D4A00B9704D /* Rubik-SemiBoldItalic.ttf */; };
+		12D73D4726838D4A00B9704D /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3926838D4A00B9704D /* Rubik-Light.ttf */; };
+		12D73D4826838D4A00B9704D /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3A26838D4A00B9704D /* Rubik-Medium.ttf */; };
+		12D73D4926838D4A00B9704D /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3B26838D4A00B9704D /* Rubik-ExtraBoldItalic.ttf */; };
+		12D73D4A26838D4A00B9704D /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3C26838D4A00B9704D /* Rubik-Black.ttf */; };
+		12D73D4B26838D4A00B9704D /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3D26838D4A00B9704D /* Rubik-Italic.ttf */; };
+		12D73D4C26838D4A00B9704D /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3E26838D4A00B9704D /* Rubik-LightItalic.ttf */; };
+		12D73D4D26838D4A00B9704D /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D3F26838D4A00B9704D /* Rubik-SemiBold.ttf */; };
+		12D73D4E26838D4A00B9704D /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D4026838D4A00B9704D /* Rubik-BlackItalic.ttf */; };
+		12D73D4F26838D4A00B9704D /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D4126838D4A00B9704D /* Rubik-ExtraBold.ttf */; };
+		12D73D5026838D4A00B9704D /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D4226838D4A00B9704D /* Rubik-Regular.ttf */; };
+		12D73D5126838D4A00B9704D /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D73D4326838D4A00B9704D /* Rubik-BoldItalic.ttf */; };
+		12D73D5726838D5F00B9704D /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D5426838D5F00B9704D /* Storyboards.swift */; };
+		12D73D5826838D5F00B9704D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D5526838D5F00B9704D /* Settings.swift */; };
+		12D73D5B26838E0800B9704D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D5926838E0800B9704D /* GradientView.swift */; };
+		12D73D5C26838E0800B9704D /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D5A26838E0800B9704D /* RoundedImageView.swift */; };
+		12D73D6426838E4B00B9704D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D5D26838E4B00B9704D /* UIView.swift */; };
+		12D73D6526838E4B00B9704D /* CustomizableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D5E26838E4B00B9704D /* CustomizableButton.swift */; };
+		12D73D6626838E4B00B9704D /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D5F26838E4B00B9704D /* UILabel.swift */; };
+		12D73D6726838E4B00B9704D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D6026838E4B00B9704D /* UIViewController.swift */; };
+		12D73D6826838E4B00B9704D /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D6126838E4B00B9704D /* UITextField.swift */; };
+		12D73D6A26838E4B00B9704D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D73D6326838E4B00B9704D /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +48,30 @@
 		12D73D20268389AA00B9704D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12D73D23268389AA00B9704D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12D73D25268389AA00B9704D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D73D3626838D4A00B9704D /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		12D73D3726838D4A00B9704D /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		12D73D3826838D4A00B9704D /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		12D73D3926838D4A00B9704D /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		12D73D3A26838D4A00B9704D /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		12D73D3B26838D4A00B9704D /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		12D73D3C26838D4A00B9704D /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		12D73D3D26838D4A00B9704D /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		12D73D3E26838D4A00B9704D /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		12D73D3F26838D4A00B9704D /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		12D73D4026838D4A00B9704D /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		12D73D4126838D4A00B9704D /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		12D73D4226838D4A00B9704D /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		12D73D4326838D4A00B9704D /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		12D73D5426838D5F00B9704D /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		12D73D5526838D5F00B9704D /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		12D73D5926838E0800B9704D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		12D73D5A26838E0800B9704D /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		12D73D5D26838E4B00B9704D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		12D73D5E26838E4B00B9704D /* CustomizableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableButton.swift; sourceTree = "<group>"; };
+		12D73D5F26838E4B00B9704D /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		12D73D6026838E4B00B9704D /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		12D73D6126838E4B00B9704D /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		12D73D6326838E4B00B9704D /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +104,135 @@
 		12D73D16268389A800B9704D /* Github Explorer */ = {
 			isa = PBXGroup;
 			children = (
-				12D73D17268389A800B9704D /* AppDelegate.swift */,
-				12D73D19268389A800B9704D /* SceneDelegate.swift */,
-				12D73D1B268389A800B9704D /* ViewController.swift */,
-				12D73D1D268389A800B9704D /* Main.storyboard */,
+				12D73D2B26838AD200B9704D /* Network */,
+				12D73D3126838CB600B9704D /* ViewControllers */,
+				12D73D3226838CC200B9704D /* Storyboards */,
+				12D73D2E26838BA600B9704D /* Helpers */,
 				12D73D20268389AA00B9704D /* Assets.xcassets */,
-				12D73D22268389AA00B9704D /* LaunchScreen.storyboard */,
 				12D73D25268389AA00B9704D /* Info.plist */,
 			);
 			path = "Github Explorer";
+			sourceTree = "<group>";
+		};
+		12D73D2B26838AD200B9704D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D2C26838B6800B9704D /* API */,
+				12D73D2D26838B6A00B9704D /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		12D73D2C26838B6800B9704D /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		12D73D2D26838B6A00B9704D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12D73D2E26838BA600B9704D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D5226838D5F00B9704D /* General */,
+				12D73D3026838CAD00B9704D /* Delegates */,
+				12D73D3426838D2B00B9704D /* Fonts */,
+				12D73D3326838D1300B9704D /* CustomViews */,
+				12D73D2F26838CA800B9704D /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		12D73D2F26838CA800B9704D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D6326838E4B00B9704D /* UIImageView.swift */,
+				12D73D5F26838E4B00B9704D /* UILabel.swift */,
+				12D73D6126838E4B00B9704D /* UITextField.swift */,
+				12D73D5D26838E4B00B9704D /* UIView.swift */,
+				12D73D6026838E4B00B9704D /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12D73D3026838CAD00B9704D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D17268389A800B9704D /* AppDelegate.swift */,
+				12D73D19268389A800B9704D /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		12D73D3126838CB600B9704D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D1B268389A800B9704D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		12D73D3226838CC200B9704D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D1D268389A800B9704D /* Main.storyboard */,
+				12D73D22268389AA00B9704D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		12D73D3326838D1300B9704D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D5E26838E4B00B9704D /* CustomizableButton.swift */,
+				12D73D5926838E0800B9704D /* GradientView.swift */,
+				12D73D5A26838E0800B9704D /* RoundedImageView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		12D73D3426838D2B00B9704D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D3526838D4A00B9704D /* Rubik */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		12D73D3526838D4A00B9704D /* Rubik */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D3626838D4A00B9704D /* Rubik-MediumItalic.ttf */,
+				12D73D3726838D4A00B9704D /* Rubik-Bold.ttf */,
+				12D73D3826838D4A00B9704D /* Rubik-SemiBoldItalic.ttf */,
+				12D73D3926838D4A00B9704D /* Rubik-Light.ttf */,
+				12D73D3A26838D4A00B9704D /* Rubik-Medium.ttf */,
+				12D73D3B26838D4A00B9704D /* Rubik-ExtraBoldItalic.ttf */,
+				12D73D3C26838D4A00B9704D /* Rubik-Black.ttf */,
+				12D73D3D26838D4A00B9704D /* Rubik-Italic.ttf */,
+				12D73D3E26838D4A00B9704D /* Rubik-LightItalic.ttf */,
+				12D73D3F26838D4A00B9704D /* Rubik-SemiBold.ttf */,
+				12D73D4026838D4A00B9704D /* Rubik-BlackItalic.ttf */,
+				12D73D4126838D4A00B9704D /* Rubik-ExtraBold.ttf */,
+				12D73D4226838D4A00B9704D /* Rubik-Regular.ttf */,
+				12D73D4326838D4A00B9704D /* Rubik-BoldItalic.ttf */,
+			);
+			path = Rubik;
+			sourceTree = "<group>";
+		};
+		12D73D5226838D5F00B9704D /* General */ = {
+			isa = PBXGroup;
+			children = (
+				12D73D5426838D5F00B9704D /* Storyboards.swift */,
+				12D73D5526838D5F00B9704D /* Settings.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +293,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				12D73D24268389AA00B9704D /* LaunchScreen.storyboard in Resources */,
+				12D73D4F26838D4A00B9704D /* Rubik-ExtraBold.ttf in Resources */,
+				12D73D4D26838D4A00B9704D /* Rubik-SemiBold.ttf in Resources */,
 				12D73D21268389AA00B9704D /* Assets.xcassets in Resources */,
 				12D73D1F268389A800B9704D /* Main.storyboard in Resources */,
+				12D73D4E26838D4A00B9704D /* Rubik-BlackItalic.ttf in Resources */,
+				12D73D4926838D4A00B9704D /* Rubik-ExtraBoldItalic.ttf in Resources */,
+				12D73D4626838D4A00B9704D /* Rubik-SemiBoldItalic.ttf in Resources */,
+				12D73D4426838D4A00B9704D /* Rubik-MediumItalic.ttf in Resources */,
+				12D73D5026838D4A00B9704D /* Rubik-Regular.ttf in Resources */,
+				12D73D4B26838D4A00B9704D /* Rubik-Italic.ttf in Resources */,
+				12D73D4726838D4A00B9704D /* Rubik-Light.ttf in Resources */,
+				12D73D4526838D4A00B9704D /* Rubik-Bold.ttf in Resources */,
+				12D73D4C26838D4A00B9704D /* Rubik-LightItalic.ttf in Resources */,
+				12D73D4A26838D4A00B9704D /* Rubik-Black.ttf in Resources */,
+				12D73D4826838D4A00B9704D /* Rubik-Medium.ttf in Resources */,
+				12D73D5126838D4A00B9704D /* Rubik-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +319,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D73D5C26838E0800B9704D /* RoundedImageView.swift in Sources */,
+				12D73D6A26838E4B00B9704D /* UIImageView.swift in Sources */,
+				12D73D5826838D5F00B9704D /* Settings.swift in Sources */,
+				12D73D6726838E4B00B9704D /* UIViewController.swift in Sources */,
+				12D73D6626838E4B00B9704D /* UILabel.swift in Sources */,
+				12D73D6826838E4B00B9704D /* UITextField.swift in Sources */,
+				12D73D6526838E4B00B9704D /* CustomizableButton.swift in Sources */,
+				12D73D5726838D5F00B9704D /* Storyboards.swift in Sources */,
 				12D73D1C268389A800B9704D /* ViewController.swift in Sources */,
+				12D73D5B26838E0800B9704D /* GradientView.swift in Sources */,
 				12D73D18268389A800B9704D /* AppDelegate.swift in Sources */,
+				12D73D6426838E4B00B9704D /* UIView.swift in Sources */,
 				12D73D1A268389A800B9704D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
