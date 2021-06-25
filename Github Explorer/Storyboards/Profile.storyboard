@@ -129,9 +129,10 @@
                                             <constraint firstAttribute="height" constant="34" id="7FQ-XO-yod"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                         <connections>
-                                            <action selector="textFieldChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="HuJ-fF-NLE"/>
+                                            <action selector="textFieldChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="fjC-sD-4q6"/>
+                                            <action selector="textFieldClickSearch:" destination="Y6W-OH-hqX" eventType="primaryActionTriggered" id="sFt-Fx-8sJ"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-v7-9nU">
@@ -140,25 +141,48 @@
                                             <constraint firstAttribute="height" constant="22" id="iLH-Gr-xuc"/>
                                             <constraint firstAttribute="width" constant="20" id="rom-OC-Qy3"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.17245572810000001" green="0.17249256369999999" blue="0.17245340349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="xmark.circle" catalog="system"/>
                                         <connections>
                                             <action selector="clickCancelSearch:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MFo-Kr-Kpq"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLO-1I-jLs">
+                                        <rect key="frame" x="228" y="4" width="75" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="MpY-nO-xk7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Search" image="magnifyingglass" catalog="system">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickedSearch:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3tj-kd-Rv1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.94635194720643945" green="0.94635194720643945" blue="0.94635194720643945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="JHu-v7-9nU" firstAttribute="centerY" secondItem="8Im-J4-Iow" secondAttribute="centerY" id="3SF-0W-DYa"/>
+                                    <constraint firstItem="eLO-1I-jLs" firstAttribute="top" secondItem="8Im-J4-Iow" secondAttribute="top" constant="4" id="BU7-35-CUc"/>
+                                    <constraint firstAttribute="bottom" secondItem="eLO-1I-jLs" secondAttribute="bottom" constant="4" id="EZc-jK-rc7"/>
                                     <constraint firstItem="ubF-S8-sNF" firstAttribute="centerY" secondItem="8Im-J4-Iow" secondAttribute="centerY" id="M8N-xX-oWW"/>
                                     <constraint firstAttribute="height" constant="42" id="OLl-ub-DaQ"/>
                                     <constraint firstItem="ubF-S8-sNF" firstAttribute="leading" secondItem="8Im-J4-Iow" secondAttribute="leading" constant="8" id="bX2-iY-VTd"/>
                                     <constraint firstAttribute="trailing" secondItem="JHu-v7-9nU" secondAttribute="trailing" constant="15" id="olq-2y-3hl"/>
+                                    <constraint firstItem="JHu-v7-9nU" firstAttribute="leading" secondItem="eLO-1I-jLs" secondAttribute="trailing" constant="5" id="pFT-cy-yw5"/>
                                     <constraint firstAttribute="trailing" secondItem="ubF-S8-sNF" secondAttribute="trailing" constant="8" id="sjv-iN-O6M"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -184,6 +208,7 @@
                     <connections>
                         <outlet property="buttonCancelSearch" destination="JHu-v7-9nU" id="UeJ-ix-cna"/>
                         <outlet property="buttonLogout" destination="whQ-ls-eik" id="KDu-cb-AK0"/>
+                        <outlet property="buttonSearch" destination="eLO-1I-jLs" id="xNY-ge-6oA"/>
                         <outlet property="imageViewProfile" destination="L4d-n0-LwS" id="7hZ-bH-3t5"/>
                         <outlet property="labelEmail" destination="uRQ-Eb-FQ7" id="r2B-qn-yQQ"/>
                         <outlet property="labelName" destination="kad-fF-dV7" id="Z6Y-3P-RKi"/>
@@ -198,10 +223,11 @@
     </scenes>
     <designables>
         <designable name="whQ-ls-eik">
-            <size key="intrinsicContentSize" width="54" height="30"/>
+            <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
     </designables>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

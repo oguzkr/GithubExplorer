@@ -8,16 +8,6 @@
 import UIKit
 
 extension UITextField {
-    func customizeUI(){
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
-        bottomLine.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        self.borderStyle = UITextField.BorderStyle.none
-        self.addPadding(.left(10))
-        self.layer.addSublayer(bottomLine)
-       
-    }
-    
 
     enum PaddingSide {
         case left(CGFloat)

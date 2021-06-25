@@ -19,7 +19,7 @@ struct Item: Codable {
     let login: String?
     let id: Int?
     let nodeid: String?
-    let avatarurl: String?
+    let avatar_url: String?
     let gravatarid: String?
     let url, htmlurl, followersurl: String?
     let followingurl, gistsurl, starredurl: String?

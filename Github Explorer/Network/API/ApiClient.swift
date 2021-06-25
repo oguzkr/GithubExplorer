@@ -13,6 +13,7 @@ class networkManager {
     
     
     var searchResults = [GithubUsers]()
+    var userDetail : UserDetail?
     
     func BASE_API(with: String) -> String {
         return "https://api.github.com/\(with)"
@@ -30,6 +31,28 @@ class networkManager {
                 do {
                     let result = try JSONDecoder().decode(GithubUsers.self, from: data)
                     self.searchResults = [result]
+                    DispatchQueue.main.async {
+                        SVProgressHUD.dismiss()
+                        completed()
+                    }
+                } catch let error {
+                    print(error)
+                    SVProgressHUD.dismiss()
+                }
+            }
+        }.resume()
+    }
+    
+    func getUserDetail(userName: String, completed: @escaping () -> ()){
+        SVProgressHUD.show()
+        AF.request(BASE_API(with: "users/\(userName)"), method: .get).responseData { response in
+            switch response.result {
+            case .failure(let error):
+                print(error)
+            case .success(let data):
+                do {
+                    let result = try JSONDecoder().decode(UserDetail.self, from: data)
+                    self.userDetail = result
                     DispatchQueue.main.async {
                         SVProgressHUD.dismiss()
                         completed()
