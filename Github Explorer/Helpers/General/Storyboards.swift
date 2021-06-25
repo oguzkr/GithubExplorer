@@ -13,5 +13,6 @@ struct Storyboard: Codable {
 }
 
 class Storyboards {
-    static let MainScreen = Storyboard(name: "MainScreen", identifier: "mainscreen")
+    static let LoginScreen = Storyboard(name: "Main", identifier: "loginscreen")
+    static let ProfileScreen = Storyboard(name: "Profile", identifier: "profile")
 }
