@@ -10,8 +10,6 @@ import SDWebImage
 import SwiftGifOrigin
 class ProfileViewController: UIViewController, UserDetailDelegate{
     
-    
-    
     //MARK: VARIABLES & OUTLETS
     var searchResults = [GithubUsers]()
     let defaults = UserDefaults.standard
@@ -67,7 +65,17 @@ class ProfileViewController: UIViewController, UserDetailDelegate{
         self.view.addSubview(headerView!)
         let centerOfView = CGRect(x:((view.frame.size.width / 2) - (headerView?.contentView.frame.width)! / 2), y: ((view.frame.size.height / 2) - (headerView?.contentView.frame.height)! / 2), width: (headerView?.contentView.frame.width)!, height: (headerView?.contentView.frame.height)!)
         
+        headerView?.frame = centerOfView
+        headerView?.alpha = 0
+        headerView?.frame.origin.y += 1000
+        
+        UIView.animate(withDuration: 1) {
+            headerView?.frame.origin.y -= 1000
+            headerView?.alpha = 1
+        }
+        
         network.getUserDetail(userName: userName) {
+            
             let url = URL(string: self.network.userDetail?.avatar_url ?? "")
             
             headerView?.labelName.text = "Name: \(self.network.userDetail?.name ?? "")"
@@ -93,15 +101,6 @@ class ProfileViewController: UIViewController, UserDetailDelegate{
                 }
             }
         }
-        
-        headerView?.frame = centerOfView
-        headerView?.alpha = 0
-        headerView?.frame.origin.y += 1000
-        
-        UIView.animate(withDuration: 1) {
-            headerView?.frame.origin.y -= 1000
-            headerView?.alpha = 1
-        }
     }
     
     func setUserInfo(){
@@ -124,6 +123,7 @@ class ProfileViewController: UIViewController, UserDetailDelegate{
         tableView.dataSource = self
     }
     
+    //MARK: PROTOCOL FUNCTIONS
     func followUser() {
         print("followuser")
         if let savedPerson = defaults.object(forKey: "SavedPerson") as? Data {
@@ -147,8 +147,6 @@ class ProfileViewController: UIViewController, UserDetailDelegate{
         }
     }
     
-    
-
     
     //MARK: TEXTFIELD CUSTOMIZATIONS
     @IBAction func textFieldChanged(_ sender: Any) {

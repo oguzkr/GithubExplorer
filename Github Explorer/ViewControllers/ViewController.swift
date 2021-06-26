@@ -17,16 +17,18 @@ class ViewController: UIViewController {
     //MARK: AT START
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        buttonSignIn.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         if UserDefaults.standard.object(forKey: "SavedPerson") != nil {
             self.goToStoryBoard(storyboard: Storyboards.ProfileScreen)
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                buttonSignIn.alpha = 1
+            }
         }
-        
-        
     }
     
     //MARK: CLICK ACTIONS
