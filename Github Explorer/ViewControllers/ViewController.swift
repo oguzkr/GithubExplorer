@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             self.goToStoryBoard(storyboard: Storyboards.ProfileScreen)
         } else {
             UIView.animate(withDuration: 0.5) {
-                buttonSignIn.alpha = 1
+                self.buttonSignIn.alpha = 1
             }
         }
     }
