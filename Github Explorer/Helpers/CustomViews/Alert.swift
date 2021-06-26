@@ -47,7 +47,7 @@ class Alert: UIAlertController {
         case .github:
             Alert.shared = Alert(title: ALERT_TITLE, message: ALERT_MESSAGE, preferredStyle: .alert)
             
-            let dontAllow = UIAlertAction(title: "İzin verme", style: .cancel) { _ in
+            let dontAllow = UIAlertAction(title: "İzin verme", style: .default) { _ in
                 self.target.dismiss(animated: true, completion: nil)
             }
             

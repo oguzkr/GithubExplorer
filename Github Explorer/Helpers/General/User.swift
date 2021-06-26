@@ -13,4 +13,5 @@ struct User: Codable {
     let displayName: String
     let email: String
     let avatarURL: String
+    let token: String
 }

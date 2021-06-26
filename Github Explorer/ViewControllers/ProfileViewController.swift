@@ -32,6 +32,7 @@ class ProfileViewController: UIViewController{
         setTableView()
     }
     
+    
     //MARK: CLICK EVENTS
     @IBAction func clickedLogout(_ sender: Any) {
         WebView.shared.deleteCookies()
@@ -67,14 +68,26 @@ class ProfileViewController: UIViewController{
         let centerOfView = CGRect(x:((view.frame.size.width / 2) - (headerView?.contentView.frame.width)! / 2), y: ((view.frame.size.height / 2) - (headerView?.contentView.frame.height)! / 2), width: (headerView?.contentView.frame.width)!, height: (headerView?.contentView.frame.height)!)
         
         network.getUserDetail(userName: userName) {
+            let url = URL(string: self.network.userDetail?.avatar_url ?? "")
+            
             headerView?.labelName.text = "Name: \(self.network.userDetail?.name ?? "")"
-            headerView?.labelUserName.text = "Name: \(self.network.userDetail?.login ?? "")"
+            headerView?.labelUserName.text = "Username: \(self.network.userDetail?.login ?? "")"
             headerView?.labelFollowing.text = "Following: \(self.network.userDetail?.following ?? 0)"
             headerView?.labelFollowers.text = "Followers: \(self.network.userDetail?.followers ?? 0)"
-            headerView?.buttonFollow.setTitle("Follow \(self.network.userDetail?.name ?? "")", for: .normal)
-            
-            let url = URL(string: self.network.userDetail?.avatar_url ?? "")
             headerView?.imageViewProfile.sd_setImage(with: url, placeholderImage: UIImage.gif(asset: "load"))
+            
+            if self.network.userDetail?.login == self.labelName.text {
+                headerView?.buttonFollow.isHidden = true
+            } else {
+                self.network.getFollowingUsers(userName: self.labelName.text!) {
+                    headerView?.buttonFollow.setTitle("Follow \(self.network.userDetail?.name ?? "")", for: .normal)
+                    for userFollowing in self.network.following {
+                        if self.network.userDetail?.login ?? "" == userFollowing.login {
+                            headerView?.buttonFollow.setTitle("Unfollow \(self.network.userDetail?.name ?? "")", for: .normal)
+                        }
+                    }
+                }
+            }
         }
         
         headerView?.frame = centerOfView
