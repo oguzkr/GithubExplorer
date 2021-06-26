@@ -90,11 +90,11 @@ class ProfileViewController: UIViewController, UserDetailDelegate{
                 headerView?.buttonFollow.isHidden = true
             } else {
                 self.network.getFollowingUsers(userName: self.labelName.text!) {
-                    headerView?.buttonFollow.setTitle("Follow \(self.network.userDetail?.name ?? "")", for: .normal)
+                    headerView?.buttonFollow.setTitle("Follow", for: .normal)
                     headerView?.following = false
                     for userFollowing in self.network.following {
                         if self.network.userDetail?.login ?? "" == userFollowing.login {
-                            headerView?.buttonFollow.setTitle("Unfollow \(self.network.userDetail?.name ?? "")", for: .normal)
+                            headerView?.buttonFollow.setTitle("Unfollow", for: .normal)
                             headerView?.following = true
                         }
                     }
