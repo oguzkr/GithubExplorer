@@ -74,7 +74,7 @@ class networkManager {
             "Content-Type": "application/vnd.github.v3+json",
             "Authorization" : "token \(accessToken)"
         ]
-        AF.request(BASE_API(with: "users/following/\(userName)"), method: .put,headers: headers).responseData { response in
+        AF.request(BASE_API(with: "user/following/\(userName)"), method: .put,headers: headers).responseData { response in
             switch response.result {
             case .failure(let error):
                 print(error)
@@ -97,7 +97,7 @@ class networkManager {
             "Content-Type": "application/vnd.github.v3+json",
             "Authorization" : "token \(accessToken)"
         ]
-        AF.request(BASE_API(with: "users/following/\(userName)"), method: .delete,headers: headers).responseData { response in
+        AF.request(BASE_API(with: "user/following/\(userName)"), method: .delete,headers: headers).responseData { response in
             switch response.result {
             case .failure(let error):
                 print(error)

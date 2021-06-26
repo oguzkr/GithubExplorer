@@ -8,14 +8,14 @@
 import UIKit
 import SDWebImage
 import SwiftGifOrigin
-class ProfileViewController: UIViewController{
+class ProfileViewController: UIViewController, UserDetailDelegate{
+    
     
     
     //MARK: VARIABLES & OUTLETS
     var searchResults = [GithubUsers]()
     let defaults = UserDefaults.standard
     let network: networkManager = networkManager()
-
     @IBOutlet weak var imageViewProfile: RoundedImageView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelEmail: UILabel!
@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController{
     @IBOutlet weak var buttonSearch: UIButton!
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
+
     //MARK: ATSTART
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,14 +76,18 @@ class ProfileViewController: UIViewController{
             headerView?.labelFollowers.text = "Followers: \(self.network.userDetail?.followers ?? 0)"
             headerView?.imageViewProfile.sd_setImage(with: url, placeholderImage: UIImage.gif(asset: "load"))
             
+            headerView?.delegate = self
+            
             if self.network.userDetail?.login == self.labelName.text {
                 headerView?.buttonFollow.isHidden = true
             } else {
                 self.network.getFollowingUsers(userName: self.labelName.text!) {
                     headerView?.buttonFollow.setTitle("Follow \(self.network.userDetail?.name ?? "")", for: .normal)
+                    headerView?.following = false
                     for userFollowing in self.network.following {
                         if self.network.userDetail?.login ?? "" == userFollowing.login {
                             headerView?.buttonFollow.setTitle("Unfollow \(self.network.userDetail?.name ?? "")", for: .normal)
+                            headerView?.following = true
                         }
                     }
                 }
@@ -119,6 +123,31 @@ class ProfileViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    func followUser() {
+        print("followuser")
+        if let savedPerson = defaults.object(forKey: "SavedPerson") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedPerson = try? decoder.decode(User.self, from: savedPerson) {
+                self.network.followUser(accessToken: loadedPerson.token, userName: self.network.userDetail?.login ?? "") {
+                    print("user followed \(self.network.userDetail?.login ?? "")")
+                }
+            }
+        }
+    }
+    
+    func unFollowUser() {        
+        if let savedPerson = defaults.object(forKey: "SavedPerson") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedPerson = try? decoder.decode(User.self, from: savedPerson) {
+                self.network.unFollowUser(accessToken: loadedPerson.token, userName: self.network.userDetail?.login ?? "") {
+                    print("user unfollowed \(self.network.userDetail?.login ?? "")")
+                }
+            }
+        }
+    }
+    
+    
 
     
     //MARK: TEXTFIELD CUSTOMIZATIONS
@@ -183,3 +212,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
 }
+
+
+
