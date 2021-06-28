@@ -20,44 +20,48 @@ class networkManager {
         return "https://api.github.com/\(with)"
     }
     
-    func searchUser(userName: String, completed: @escaping () -> ()){
+    func searchUser(userName: String, completed: @escaping (_ success: Bool) -> ()){
         SVProgressHUD.show()
         let parameters = ["q": "\(userName) in:login"]
         AF.request(BASE_API(with: "search/users"), method: .get, parameters: parameters).responseData { response in
             switch response.result {
             case .failure(let error):
                 print(error)
+                completed(false)
             case .success(let data):
                 do {
                     let result = try JSONDecoder().decode(GithubUsers.self, from: data)
                     self.searchResults = [result]
                     DispatchQueue.main.async {
                         SVProgressHUD.dismiss()
-                        completed()
+                        completed(true)
                     }
                 } catch let error {
                     print(error)
+                    completed(false)
                     SVProgressHUD.dismiss()
                 }
             }
         }.resume()
     }
     
-    func getUserDetail(userName: String, completed: @escaping () -> ()){
+    func getUserDetail(userName: String, completed: @escaping (_ success: Bool) -> ()){
         SVProgressHUD.show()
         AF.request(BASE_API(with: "users/\(userName)"), method: .get).responseData { response in
             switch response.result {
             case .failure(let error):
                 print(error)
+                completed(false)
             case .success(let data):
                 do {
                     let result = try JSONDecoder().decode(UserDetail.self, from: data)
                     self.userDetail = result
                     DispatchQueue.main.async {
                         SVProgressHUD.dismiss()
-                        completed()
+                        completed(true)
                     }
                 } catch let error {
+                    completed(false)
                     print(error)
                     SVProgressHUD.dismiss()
                 }
@@ -66,7 +70,7 @@ class networkManager {
     }
     
     
-    func followUser(accessToken: String, userName: String,completed: @escaping () -> ()){
+    func followUser(accessToken: String, userName: String,completed: @escaping (_ success: Bool) -> ()){
         let headers : HTTPHeaders =
         [
             "Accept": "application/vnd.github.v3+json",
@@ -78,18 +82,19 @@ class networkManager {
             switch response.result {
             case .failure(let error):
                 print(error)
+                completed(false)
             case .success(let data):
                 let outputStr  = String(data: data, encoding: String.Encoding.utf8) as String?
                 print("data \(outputStr!)")
                 DispatchQueue.main.async {
-                    completed()
+                    completed(true)
                 }
             }
         }.resume()
     }
     
     
-    func unFollowUser(accessToken: String, userName: String, completed: @escaping () -> ()){
+    func unFollowUser(accessToken: String, userName: String, completed: @escaping (_ success: Bool) -> ()){
         let headers : HTTPHeaders =
         [
             "Accept": "application/vnd.github.v3+json",
@@ -101,28 +106,30 @@ class networkManager {
             switch response.result {
             case .failure(let error):
                 print(error)
+                completed(false)
             case .success(let data):
                 let outputStr  = String(data: data, encoding: String.Encoding.utf8) as String?
                 print("data \(outputStr!)")
                 DispatchQueue.main.async {
-                    completed()
+                    completed(true)
                 }
             }
         }.resume()
     }
     
-    func getFollowingUsers(userName: String, completed: @escaping () -> ()){
+    func getFollowingUsers(userName: String, completed: @escaping (_ success: Bool) -> ()){
         AF.request(BASE_API(with: "users/\(userName)/following"), method: .get).responseData { response in
             switch response.result {
             case .failure(let error):
                 print(error)
+                completed(false)
             case .success(let data):
                 do {
                     let result = try JSONDecoder().decode([Following].self, from: data)
                     self.following = result
                     print(self.following)
                     DispatchQueue.main.async {
-                        completed()
+                        completed(true)
                     }
                 } catch let error {
                     print(error)
