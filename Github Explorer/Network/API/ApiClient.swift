@@ -138,9 +138,6 @@ class networkManager {
         }.resume()
     }
   
-    
-
-    
 }
 
 //MARK: Authentication
@@ -162,8 +159,6 @@ extension ViewController {
         }
     }
     
-    
-
     func requestAccessToken(authCode: String) {
         let grantType = "authorization_code"
         let postParams = "grant_type=" + grantType + "&code=" + authCode + "&client_id=" + Credential.CLIENT_ID + "&client_secret=" + Credential.CLIENT_SECRET
@@ -183,7 +178,6 @@ extension ViewController {
         }
         task.resume()
     }
-    
     
     func requestUserProfile(accessToken: String) {
         let tokenURL = "https://api.github.com/user"

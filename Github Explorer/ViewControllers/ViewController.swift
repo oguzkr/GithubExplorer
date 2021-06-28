@@ -50,8 +50,6 @@ class ViewController: UIViewController {
     
 }
 
-
-
 //MARK: EXTENSIONS
 extension ViewController: WKNavigationDelegate {
     

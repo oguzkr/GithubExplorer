@@ -64,8 +64,6 @@ class ProfileViewController: UIViewController, UserDetailDelegate{
 
     //MARK: HELPER FUNCTIONS
     func showUserDetail(userName: String){
-        
-        
         network.getUserDetail(userName: userName) { success in
             if success {
                 let headerView = Bundle.main.loadNibNamed("userDetail", owner:
@@ -146,7 +144,7 @@ class ProfileViewController: UIViewController, UserDetailDelegate{
                     if success {
                         print("user followed \(self.network.userDetail?.login ?? "")")
                     } else {
-                        
+                        self.showAlert(titleInput: "error", messageInput: "not able to follow \(self.network.userDetail?.login ?? "") right now :(")
                     }
                 }
             }
